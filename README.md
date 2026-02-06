@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deal Desk Guardrails 🛡️
 
-## Getting Started
+A high-performance, professional **GTM Finance Engine** built with Next.js 15. This platform enables Deal Desk and Finance teams to evaluate enterprise deal profitability and margin protection in real-time.
 
-First, run the development server:
+![Feature Screenshot](https://raw.githubusercontent.com/lolahan/DealDesk/main/public/screenshot.png) *(Note: Replace with actual screenshot after deployment)*
 
+## 🚀 Key Features
+
+- **Automated Profitability Analysis**: Instant calculation of Base ARR, AI ARR, and Gross/Net margins based on granular inputs (seats, usage units, discounts).
+- **AI Executive Brief**: One-click deal summaries using OpenAI (GPT-4o-mini) with a deterministic fallback for executive decision-making.
+- **Smart Guardrails**: Real-time evaluation against finance policies (Approvals, Rejections, Conditional terms).
+- **Strategic Advisory**: Built-in logic to suggest deal terms and risk mitigation strategies.
+- **Elite Aesthetic**: High-contrast, typography-focused "Finance Terminal" UI with support for Dark/Light modes.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI**: OpenAI API
+- **Deployment**: Vercel
+
+## 📦 Getting Started
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/lolahan/DealDesk.git
+cd DealDesk
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Set up Environment Variables
+Create a `.env.local` file in the root directory:
+```env
+OPENAI_API_KEY=your_openai_api_key_here
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) to see the result.
 
-## Learn More
+## 💼 Business Logic
 
-To learn more about Next.js, take a look at the following resources:
+The engine follows standard enterprise SaaS pricing models:
+- **Base Subscription**: $Seats \times Price/Seat/Month \times 12$
+- **AI Packages**: $Units \times Price/Unit \times 12$
+- **Partner Logic**: Net margin calculations account for channel incentives and partner take-rates.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built for high-velocity GTM organizations.
