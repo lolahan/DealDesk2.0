@@ -155,7 +155,7 @@ const ResultsPanel: React.FC<ResultsPanelProps> = ({ data }) => {
                         <div className="space-y-1 px-1 text-right">
                             <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.3em]">Margin</p>
                             <p className={`font-outfit text-2xl font-black tracking-tighter uppercase italic ${outcome.netMargin < 0.45 ? 'text-rose-500' : 'text-slate-900 dark:text-white'}`}>
-                                {(outcome.netMargin * 100).toFixed(1)}%
+                                {(outcome.netMargin * 100).toFixed(2)}%
                             </p>
                         </div>
                     </div>

@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-primary: #293e40;
+  --color-brand-accent: #81b5a1;
+  --color-brand-danger: #e05e5e;
+  --color-brand-warning: #f5a623;
+  --color-brand-bg-dark: #0f172a;
+  --color-brand-card: rgba(30, 41, 59, 0.7);
+  --color-brand-border: rgba(255, 255, 255, 0.1);
+}
+
 @font-face {
   font-family: 'Outfit';
   src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
@@ -11,17 +21,15 @@
 }
 
 :root {
-  --background: #fdfdfe;
+  --background: #f8fafc;
   --foreground: #020617;
-  --accent: #000000;
+  --accent: #293e40;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #f8fafc;
-    --accent: #ffffff;
-  }
+.dark {
+  --background: #020617;
+  --foreground: #f1f5f9;
+  --accent: #81b5a1;
 }
 
 body {
@@ -36,23 +44,71 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
-.tracking-tighter-extra {
-  letter-spacing: -0.05em;
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.82);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .dark .glass-card {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Custom scrollbar */
+.glass-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark .glass-card:hover {
+  background: rgba(30, 41, 59, 0.6);
+}
+
+/* Tables */
+.sn-table {
+  @apply w-full text-left text-sm border-collapse;
+}
+
+.sn-table th {
+  @apply p-3 font-semibold text-slate-500 dark:text-slate-400 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50;
+}
+
+.sn-table td {
+  @apply p-3 border-b border-slate-100 dark:border-slate-800/50 transition-colors;
+}
+
+.sn-table tr:hover td {
+  @apply bg-slate-50/80 dark:bg-slate-800/30;
+}
+
+/* Tags */
+.status-tag {
+  @apply px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider;
+}
+
+.status-approve { @apply bg-emerald-500/10 text-emerald-500 border border-emerald-500/20; }
+.status-review { @apply bg-amber-500/10 text-amber-500 border border-amber-500/20; }
+.status-stop { @apply bg-rose-500/10 text-rose-500 border border-rose-500/20; }
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -60,19 +116,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #e2e8f0;
-  border-radius: 10px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #1e293b;
-}
-
-/* Decorative utilities */
-.text-stroke-black {
-  -webkit-text-stroke: 1px black;
-}
-
-.dark .text-stroke-white {
-  -webkit-text-stroke: 1px white;
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
 }

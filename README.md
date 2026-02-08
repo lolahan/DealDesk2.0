@@ -1,56 +1,51 @@
-# Deal Desk Guardrails 🛡️
+# AI Marketing & Financial Performance Explorer (Deal Desk 2.0)
 
-A high-performance, professional **GTM Finance Engine** built with Next.js 15. This platform enables Deal Desk and Finance teams to evaluate enterprise deal profitability and margin protection in real-time.
+An enterprise-grade platform for professional marketing decision-making and post-period financial data exploration. This application transforms complex datasets into actionable strategic insights through AI-driven simulation and natural language processing.
 
-![Feature Screenshot](https://raw.githubusercontent.com/lolahan/DealDesk/main/public/screenshot.png) *(Note: Replace with actual screenshot after deployment)*
+## 🚀 Key Modules
 
-## 🚀 Key Features
+### 1. Unified Campaign Data Engine
+- **Real-time Simulation**: Instantly simulate the impact of cost and ACV adjustments on campaign ROI and decision integrity.
+- **Dynamic Campaign Management**: Full CRUD capabilities directly within a high-performance data grid.
+- **Persisted State**: Your work is automatically saved to local storage using Zustand's persistence middleware.
 
-- **Automated Profitability Analysis**: Instant calculation of Base ARR, AI ARR, and Gross/Net margins based on granular inputs (seats, usage units, discounts).
-- **AI Executive Brief**: One-click deal summaries using OpenAI (GPT-4o-mini) with a deterministic fallback for executive decision-making.
-- **Smart Guardrails**: Real-time evaluation against finance policies (Approvals, Rejections, Conditional terms).
-- **Strategic Advisory**: Built-in logic to suggest deal terms and risk mitigation strategies.
-- **Elite Aesthetic**: High-contrast, typography-focused "Finance Terminal" UI with support for Dark/Light modes.
+### 2. Executive ROI Dashboard
+- **Global KPI Summary**: Track total generated ACV, average ROI, and aggregate performance metrics.
+- **Structural Insights**: Beautiful visualizations (Bar/Pie) illustrating budget distribution and channel performance.
 
-## 🛠️ Tech Stack
+### 3. AI Financial Data Explorer
+- **Natural Language Search**: Explore transactional data for multiple corporations (ByrnSil/Kopix) using plain English commands.
+- **Automated Insights**: AI identifies structural profit engines and identifies high-risk segments automatically.
+- **Dynamic Visualization Layer**: Multi-modal charting (Bar, Pie, Line, Scatter) with manual type switching and row-level data highlighting.
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **AI**: OpenAI API
-- **Deployment**: Vercel
+## 🛠️ Technology Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand) (with Storage Persistence)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Visualizations**: [Recharts](https://recharts.org/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
 ## 📦 Getting Started
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/lolahan/DealDesk.git
-cd DealDesk
-```
-
-### 2. Install dependencies
+### Installation
 ```bash
 npm install
 ```
 
-### 3. Set up Environment Variables
-Create a `.env.local` file in the root directory:
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-```
-
-### 4. Run the development server
+### Run Locally
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-## 💼 Business Logic
-
-The engine follows standard enterprise SaaS pricing models:
-- **Base Subscription**: $Seats \times Price/Seat/Month \times 12$
-- **AI Packages**: $Units \times Price/Unit \times 12$
-- **Partner Logic**: Net margin calculations account for channel incentives and partner take-rates.
+## 📊 Sample Queries (Financial Explorer)
+- *"Show profit share by division"*
+- *"Identify projects with negative profit"*
+- *"Compare ByrnSil vs Kopix net margins"*
+- *"Top 5 projects by revenue"*
 
 ---
-Built for high-velocity GTM organizations.
+Developed as a high-integrity professional tool for Financial and Marketing analyst personas.
